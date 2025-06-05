@@ -26,7 +26,8 @@ jobs:
 
           SLUG_KEYWORDS = {
               "coding-test": "coding-test",
-              "python-basics": "python-basics"
+              "python-basics": "python-basics",
+              "hashnode": "hashnode",
           }
 
           for filename in os.listdir("."):
