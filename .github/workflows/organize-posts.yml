@@ -48,19 +48,18 @@ jobs:
                       new_filename = f"{slug}.md"
                       os.rename(filename, new_filename)
 
+                      # Then, use new_filename from this point forward
                       matched = False
-
                       for keyword, folder in SLUG_KEYWORDS.items():
                           if keyword in slug:
                               os.makedirs(folder, exist_ok=True)
-                              shutil.move(filename, os.path.join(folder, filename))
+                              shutil.move(new_filename, os.path.join(folder, new_filename))  # ← updated here
                               matched = True
-                              print(f"Moved {filename} to {folder}/")
+                              print(f"Moved {new_filename} to {folder}/")
                               break
 
                       if not matched:
-                          print(f"No matching slug keyword found for: {filename}")
-
+                          print(f"No matching slug keyword found for: {new_filename}")
         shell: python
 
       - name: Commit organized files
