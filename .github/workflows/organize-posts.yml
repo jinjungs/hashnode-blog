@@ -68,4 +68,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add .
           git commit -m "Organized posts by slug keywords" || echo "No changes"
+          git pull --rebase origin main
           git push
