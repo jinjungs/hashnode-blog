@@ -1,0 +1,67 @@
+name: Organize Blog Posts by Slug
+
+on:
+  push:
+    paths:
+      - "*.md"
+  
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Organize by slug keyword
+        run: |
+          import os, yaml, shutil
+
+          SLUG_KEYWORDS = {
+              "coding-test": "coding-test",
+              "python-basics": "python-basics"
+          }
+
+          for filename in os.listdir("."):
+              if filename.endswith(".md"):
+                  with open(filename, 'r', encoding='utf-8') as f:
+                      lines = f.readlines()
+
+                  if lines[0].strip() == "---":
+                      frontmatter = []
+                      for line in lines[1:]:
+                          if line.strip() == "---":
+                              break
+                          frontmatter.append(line)
+
+                      meta = yaml.safe_load("".join(frontmatter))
+                      slug = meta.get("slug", "")
+                      matched = False
+
+                      for keyword, folder in SLUG_KEYWORDS.items():
+                          if keyword in slug:
+                              os.makedirs(folder, exist_ok=True)
+                              shutil.move(filename, os.path.join(folder, filename))
+                              matched = True
+                              print(f"Moved {filename} to {folder}/")
+                              break
+
+                      if not matched:
+                          print(f"No matching slug keyword found for: {filename}")
+
+        shell: python
+
+      - name: Commit organized files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Organized posts by slug keywords" || echo "No changes"
+          git push
