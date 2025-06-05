@@ -43,6 +43,11 @@ jobs:
 
                       meta = yaml.safe_load("".join(frontmatter))
                       slug = meta.get("slug", "")
+
+                      # rename file to slug
+                      new_filename = f"{slug}.md"
+                      os.rename(filename, new_filename)
+
                       matched = False
 
                       for keyword, folder in SLUG_KEYWORDS.items():
