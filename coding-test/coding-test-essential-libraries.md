@@ -1,12 +1,12 @@
 ---
-title: "[2025 Edition] Ultimate Python Cheatsheet for Coding Interviews: Input, Logic, Strings, Sorting & More"
-seoTitle: "Python Cheatsheet 2025: Interviews Made Easy"
-seoDescription: "Master Python syntax, I/O, sorting techniques for coding interviews with this 2025 cheat sheet. Ace your tests!"
+title: "Ultimate Python Cheatsheet for Coding Interviews: Input, Logic, Strings, Sorting & More"
+seoTitle: "Python Coding Interview Cheatsheet: Key Concepts"
+seoDescription: "Comprehensive Python cheatsheet for coding interviews covering input/output, syntax, strings, sorting, data structures, and more essential concepts"
 datePublished: Tue Jan 28 2025 15:58:30 GMT+0000 (Coordinated Universal Time)
 cuid: cm6gnwi3m000g09l853ovg99k
 slug: coding-test-essential-libraries
 canonical: https://ejjung.hashnode.dev/coding-test-essential-libraries
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/ZIPFteu-R8k/upload/816adc28885501ba2e353c2550d82290.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1750309819576/cb0dab59-c399-4820-b37e-0907e065488f.png
 tags: python, coding, coding-interview, python-libraries, coding-test, python-cheatsheet
 
 ---
