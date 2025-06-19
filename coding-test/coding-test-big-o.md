@@ -3,7 +3,7 @@ title: "Big-O You Actually Need to Know (Nothing More)"
 datePublished: Mon Jun 16 2025 04:44:39 GMT+0000 (Coordinated Universal Time)
 cuid: cmbym1c8d000402l9fmui1ex7
 slug: coding-test-big-o
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/B6mn3nutumQ/upload/5b880d138cc3ee934ba15a122ce7797d.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1750311035959/e73d239b-a73e-4aed-b1cd-d655711dda97.png
 tags: time-complexity, big-o-notation, space-complexity, coding-test, logn
 
 ---
