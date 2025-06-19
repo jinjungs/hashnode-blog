@@ -1,11 +1,11 @@
 ---
-title: "[Coding Test] Sorting Algorithms - 1"
+title: "Key Sorting Algorithms Every Coder Should Know for Tests - 1"
 seoTitle: "[Coding Test] Sorting Algorithms: An Introduction"
 seoDescription: "Explore key ideas, time, and space complexities of Bubble Sort, Selection Sort, and Insertion Sort in this detailed coding test guide"
 datePublished: Wed Jan 29 2025 15:10:14 GMT+0000 (Coordinated Universal Time)
 cuid: cm6i1m9xr000008jo5z56g0x3
 slug: coding-test-sorting-algorithms-1
-cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/WCID2JWoxwE/upload/0714d645f641002e7a077a31a7133a9d.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1750311554314/7165d9e2-65f5-42cd-9083-44594792a5c8.png
 tags: algorithms, coding, insertion-sort, sorting, bubble-sort, selection-sort, coding-test
 
 ---
