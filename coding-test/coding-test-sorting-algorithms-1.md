@@ -10,25 +10,23 @@ tags: algorithms, coding, insertion-sort, sorting, bubble-sort, selection-sort, 
 
 ---
 
-# 1\. Bubble Sort
-
-## key Idea
+## 1\. Bubble Sort
 
 > Compare adjacent pairs of elements in an array and swap them if they are in the wrong order, <mark>gradually moving larger elements to the end of the array.</mark>
 
-## Time Complexity
+### Time Complexity
 
 * O(n^2) in the worst and average cases
     
 * O(n) in the best case (when the input array is already sorted)
     
 
-## Space Complexity
+### Space Complexity
 
 * O(1)
     
 
-## Code
+### Code
 
 ```python
 def bubble_sort(l: List[int]) -> List[int]:
@@ -41,23 +39,21 @@ def bubble_sort(l: List[int]) -> List[int]:
 
 ---
 
-# 2\. Selection Sort
-
-## key Idea
+## 2\. Selection Sort
 
 > <mark>Find the minimum element from the unsorted portion</mark> of the array and swap it with the first unsorted element.
 
-## Time Complexity
+### Time Complexity
 
 * O(n^2) in all cases
     
 
-## Space Complexity
+### Space Complexity
 
 * O(1)
     
 
-## Code
+### Code
 
 ```python
 def selection_sort(l: List[int]) -> List[int]:
@@ -73,23 +69,25 @@ def selection_sort(l: List[int]) -> List[int]:
 
 ---
 
-# 3\. Insertion Sort
+## 3\. Insertion Sort
 
-## key Idea
+### key Idea
 
 > Take each element from the unsorted portion and <mark>insert it into its correct position within the sorted portion</mark> of the array.
 
-## Time Complexity
+### Time Complexity
 
 * O(n^2) in worst case
     
 * Performs well for small or nearly sorted list.
     
 
-## Space Complexity
+### Space Complexity
 
 * O(1)
     
+
+### Code
 
 ```python
 def insertion_sort(l: List[int]) -> List[int]:
