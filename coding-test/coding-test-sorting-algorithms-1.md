@@ -10,7 +10,7 @@ tags: algorithms, coding, insertion-sort, sorting, bubble-sort, selection-sort, 
 
 ---
 
-## 1\. Bubble Sort
+## 🫧 1. Bubble Sort
 
 > Compare adjacent pairs of elements in an array and swap them if they are in the wrong order, <mark>gradually moving larger elements to the end of the array.</mark>
 
@@ -39,7 +39,7 @@ def bubble_sort(l: List[int]) -> List[int]:
 
 ---
 
-## 2\. Selection Sort
+## 📍2. Selection Sort
 
 > <mark>Find the minimum element from the unsorted portion</mark> of the array and swap it with the first unsorted element.
 
@@ -69,7 +69,7 @@ def selection_sort(l: List[int]) -> List[int]:
 
 ---
 
-## 3\. Insertion Sort
+## 🪛 3. Insertion Sort
 
 > Take each element from the unsorted portion and <mark>insert it into its correct position within the sorted portion</mark> of the array.
 
