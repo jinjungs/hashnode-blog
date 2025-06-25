@@ -101,7 +101,7 @@ def insertion_sort(l: List[int]) -> List[int]:
 
 ---
 
-# 99\. References
+## 99\. References
 
 * [Sorting Algorithms Explained in 10 min](https://www.youtube.com/watch?v=Bor_CRWEIXo&t=44s)
     
