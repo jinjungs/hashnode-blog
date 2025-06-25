@@ -14,19 +14,19 @@ tags: algorithms, coding, insertion-sort, sorting, bubble-sort, selection-sort, 
 
 > Compare adjacent pairs of elements in an array and swap them if they are in the wrong order, <mark>gradually moving larger elements to the end of the array.</mark>
 
-### Time Complexity
+### 1.1. Time Complexity
 
-* O(n^2) in the worst and average cases
+* **Average / Worst case**: O(n^2)
     
-* O(n) in the best case (when the input array is already sorted)
-    
-
-### Space Complexity
-
-* O(1)
+* **Best case**: O(n) (already sorted)
     
 
-### Code
+### 1.2. Space Complexity
+
+* **O(1)**
+    
+
+### 1.3. Code
 
 ```python
 def bubble_sort(l: List[int]) -> List[int]:
@@ -43,17 +43,17 @@ def bubble_sort(l: List[int]) -> List[int]:
 
 > <mark>Find the minimum element from the unsorted portion</mark> of the array and swap it with the first unsorted element.
 
-### Time Complexity
+### 2.1. Time Complexity
 
-* O(n^2) in all cases
+* **All cases**: O(n^2)
     
 
-### Space Complexity
+### 2.2. Space Complexity
 
-* O(1)
+* **O(1)**
     
 
-### Code
+### 2.3. Code
 
 ```python
 def selection_sort(l: List[int]) -> List[int]:
@@ -71,23 +71,21 @@ def selection_sort(l: List[int]) -> List[int]:
 
 ## 3\. Insertion Sort
 
-### key Idea
-
 > Take each element from the unsorted portion and <mark>insert it into its correct position within the sorted portion</mark> of the array.
 
-### Time Complexity
+### 3.1. Time Complexity
 
-* O(n^2) in worst case
+* **Worst case**: O(n^2)
     
 * Performs well for small or nearly sorted list.
     
 
-### Space Complexity
+### 3.2. Space Complexity
 
-* O(1)
+* **O(1)**
     
 
-### Code
+### 3.3. Code
 
 ```python
 def insertion_sort(l: List[int]) -> List[int]:
@@ -101,7 +99,15 @@ def insertion_sort(l: List[int]) -> List[int]:
 
 ---
 
-## 99\. References
+## ✨ Summary
+
+| Algorithm | Time Complexity (Worst) | Time Complexity (Best) | Space Complexity | Stable? |
+| --- | --- | --- | --- | --- |
+| Bubble Sort | O(n²) | O(n) | O(1) | Yes |
+| Selection Sort | O(n²) | O(n²) | O(1) | No |
+| Insertion Sort | O(n²) | O(n) | O(1) | Yes |
+
+## **🔗** References
 
 * [Sorting Algorithms Explained in 10 min](https://www.youtube.com/watch?v=Bor_CRWEIXo&t=44s)
     
