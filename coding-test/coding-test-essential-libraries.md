@@ -565,6 +565,31 @@ words.sort(key=lambda x: (len(x), x))
 print(words)  # Output: ['app', 'dog', 'hi', 'apple']
 ```
 
+### 6.6. Custom Sort with `cmp_to_key`
+
+* When sorting requires comparing **pairs of items directly**, cmp\_to\_key lets you define a custom comparator.
+    
+* Use this when tuple-based lambda sorting isn’t flexible enough.
+    
+
+```python
+from functools import cmp_to_key
+
+words = ["3", "30", "34", "5", "9"]
+
+# Custom comparator function
+def compare(x, y):
+    if x + y > y + x:
+        return -1  # x should come before y
+    elif x + y < y + x:
+        return 1   # y should come before x
+    else:
+        return 0   # order doesn't matter
+
+words.sort(key=cmp_to_key(compare))
+print(words)  # Output: ['9', '5', '34', '3', '30']
+```
+
 ---
 
 ## 🧰 7. Useful Essential Libraries
