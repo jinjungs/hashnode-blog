@@ -5,7 +5,7 @@ seoDescription: "Learn how Union-Find efficiently manages disjoint sets, connect
 datePublished: Tue Jul 15 2025 07:22:42 GMT+0000 (Coordinated Universal Time)
 cuid: cmd47gamo002i02js9a37g0fr
 slug: coding-test-union-find
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1752564092038/db81eab2-3cac-4cea-ae6e-0d5ca3ff9c46.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1754693554366/a543cbcc-5753-4359-b9a3-1369cd1b3c8e.png
 tags: algorithms, tree, coding-test, union-find
 
 ---
