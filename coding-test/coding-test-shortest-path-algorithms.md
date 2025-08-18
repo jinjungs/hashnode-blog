@@ -5,7 +5,7 @@ seoDescription: "Study Dijkstra, Bellman-Ford, and Floyd-Warshall algorithms for
 datePublished: Thu Aug 14 2025 23:30:24 GMT+0000 (Coordinated Universal Time)
 cuid: cmec18bel000702gs2yitavxk
 slug: coding-test-shortest-path-algorithms
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755214133958/9b63aa0c-a1c9-47b4-a273-99c38b18187d.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755551337200/c6e8e60f-dbef-4544-86bf-17ab24fc228a.png
 tags: dijkstra, bellman-ford, bellmanford, shortestpathalgorithms, floyd-warshall
 
 ---
