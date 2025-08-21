@@ -5,7 +5,7 @@ seoDescription: "Master BFS/DFS techniques for grid and graph problems to excel 
 datePublished: Fri Aug 08 2025 22:57:22 GMT+0000 (Coordinated Universal Time)
 cuid: cme3fepwv000c02jp519e7s4m
 slug: coding-test-dfs-bfs
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1754693425610/f887834f-6b51-47cd-abdf-9457977d3405.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755816048402/7d5d07c7-d8bc-42e1-9bdb-035e7cdaa056.png
 tags: algorithms, bfs, dfs, coding-test
 
 ---
