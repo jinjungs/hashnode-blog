@@ -5,7 +5,7 @@ seoDescription: "A comprehensive guide to compare Kruskal's and Prim's algorithm
 datePublished: Tue Aug 12 2025 23:30:31 GMT+0000 (Coordinated Universal Time)
 cuid: cme96cr1e000902i55tvy6367
 slug: coding-test-minimum-spanning-trees-kruskals-prims-algorithm
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755041304130/ea37d9a0-df83-491d-935c-460dcb966804.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755815332768/f3037e23-651d-40fc-8775-d1099729bd44.png
 tags: algorithms, codinginterview, coding-test, kruskal, primsalgorithm, kruskalalgorithm
 
 ---
