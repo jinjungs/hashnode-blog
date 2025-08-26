@@ -16,17 +16,9 @@ A nested class is a class declared within another class. They are categorized in
 
 | Category by Declaration | Sub-category | Declaration Location | Description |
 | --- | --- | --- | --- |
-| **Member Class** | Instance Member Class | class A {  
-class B {...}  
-} | A nested class `B` that can only be used after creating an object of `A`. |
-| **Member Class** | Static Member Class | class A {  
-static class B {...}  
-} | A nested class `B` that can be accessed directly through class `A`. |
-| **Local Class** | \- | class A {  
-void method {  
-class B {...}  
-}  
-} | A nested class `B` that can only be used during the execution of `method()`. |
+| Member Class | Instance Member Class | class A { class B {...} } | A nested class `B` that can only be used after creating an object of `A`. |
+| Member Class | Static Member Class | class A { static class B {...} } | A nested class `B` that can be accessed directly through class `A`. |
+| Local Class |  | class A { void method { class B {...} } } | A nested class `B` that can only be used during the execution of `method()`. |
 
 ---
 
