@@ -28,6 +28,7 @@ jobs:
               "coding-test": "coding-test",
               "python-basics": "python-basics",
               "hashnode": "hashnode",
+              "java": "java",
           }
 
           for filename in os.listdir("."):
