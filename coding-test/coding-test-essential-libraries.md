@@ -5,7 +5,6 @@ seoDescription: "Comprehensive Python cheatsheet for coding interviews covering 
 datePublished: Tue Jan 28 2025 15:58:30 GMT+0000 (Coordinated Universal Time)
 cuid: cm6gnwi3m000g09l853ovg99k
 slug: coding-test-essential-libraries
-canonical: https://ejjung.hashnode.dev/coding-test-essential-libraries
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1750309819576/cb0dab59-c399-4820-b37e-0907e065488f.png
 tags: python, coding, coding-interview, python-libraries, coding-test, python-cheatsheet
 
