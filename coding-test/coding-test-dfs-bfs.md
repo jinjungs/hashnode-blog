@@ -1,5 +1,5 @@
 ---
-title: "Understanding Python's DFS and BFS Techniques"
+title: "Understanding DFS and BFS Techniques"
 seoTitle: "Python Search Techniques: DFS vs BFS"
 seoDescription: "Master BFS/DFS techniques for grid and graph problems to excel in coding interviews and contests"
 datePublished: Fri Aug 08 2025 22:57:22 GMT+0000 (Coordinated Universal Time)
