@@ -25,10 +25,12 @@ jobs:
           import os, yaml, shutil
 
           SLUG_KEYWORDS = {
-              "coding-test": "coding-test",
-              "python-basics": "python-basics",
-              "hashnode": "hashnode",
+              "productivity": "productivity",
               "java": "java",
+              "system-design": "system-design",
+              "thoughts": "thoughts",
+              "side-project": "side-project",
+              "algorithms": "algorithms",
           }
 
           for filename in os.listdir("."):
