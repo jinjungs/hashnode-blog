@@ -3,8 +3,8 @@ name: Organize Blog Posts by Slug
 on:
   push:
     paths:
-      - "*.md"
-  
+      - "**/*.md"
+
 jobs:
   organize:
     runs-on: ubuntu-latest
@@ -33,37 +33,81 @@ jobs:
               "algorithms": "algorithms",
           }
 
-          for filename in os.listdir("."):
-              if filename.endswith(".md"):
-                  with open(filename, 'r', encoding='utf-8') as f:
-                      lines = f.readlines()
+          # Phase 1: collect metadata for all markdown files (do not rename/move yet)
+          md_files = [f for f in os.listdir(".") if f.endswith(".md")]
+          entries = []  # (original_filename, slug, dest_folder_or_None)
 
-                  if lines[0].strip() == "---":
-                      frontmatter = []
-                      for line in lines[1:]:
-                          if line.strip() == "---":
-                              break
-                          frontmatter.append(line)
+          for filename in md_files:
+              try:
+                  with open(filename, 'r', encoding='utf-8') as fh:
+                      lines = fh.readlines()
+              except FileNotFoundError:
+                  # file may have been moved by something else; skip
+                  print(f"Skipping missing file (already moved): {filename}")
+                  continue
 
-                      meta = yaml.safe_load("".join(frontmatter))
-                      slug = meta.get("slug", "")
+              if not lines or lines[0].strip() != "---":
+                  print(f"Skipping {filename}: no YAML frontmatter")
+                  continue
 
-                      # rename file to slug
-                      new_filename = f"{slug}.md"
-                      os.rename(filename, new_filename)
+              frontmatter_lines = []
+              for line in lines[1:]:
+                  if line.strip() == "---":
+                      break
+                  frontmatter_lines.append(line)
 
-                      # Then, use new_filename from this point forward
-                      matched = False
-                      for keyword, folder in SLUG_KEYWORDS.items():
-                          if keyword in slug:
-                              os.makedirs(folder, exist_ok=True)
-                              shutil.move(new_filename, os.path.join(folder, new_filename))  # ← updated here
-                              matched = True
-                              print(f"Moved {new_filename} to {folder}/")
-                              break
+              try:
+                  meta = yaml.safe_load("".join(frontmatter_lines)) or {}
+              except Exception as e:
+                  print(f"Failed to parse frontmatter for {filename}: {e}")
+                  continue
 
-                      if not matched:
-                          print(f"No matching slug keyword found for: {new_filename}")
+              slug = meta.get("slug") or ""
+              if not slug:
+                  print(f"No slug found for {filename}; skipping")
+                  continue
+
+              dest = None
+              for keyword, folder in SLUG_KEYWORDS.items():
+                  if keyword in slug:
+                      dest = folder
+                      break
+
+              entries.append((filename, slug, dest))
+
+          # Phase 2: perform safe renames and moves
+          for original, slug, dest_folder in entries:
+              new_basename = f"{slug}.md"
+
+              # ensure we do not overwrite an existing file unintentionally;
+              # if new_basename exists and is different from original, append numeric suffix
+              candidate = new_basename
+              counter = 1
+              while os.path.exists(candidate) and candidate != original:
+                  candidate = f"{slug}-{counter}.md"
+                  counter += 1
+              new_filename = candidate
+
+              try:
+                  os.rename(original, new_filename)
+                  print(f"Renamed {original} -> {new_filename}")
+              except FileNotFoundError:
+                  print(f"Rename skipped; {original} not found.")
+                  continue
+              except Exception as e:
+                  print(f"Rename error for {original} -> {new_filename}: {e}")
+                  continue
+
+              if dest_folder:
+                  os.makedirs(dest_folder, exist_ok=True)
+                  dest_path = os.path.join(dest_folder, new_filename)
+                  try:
+                      shutil.move(new_filename, dest_path)
+                      print(f"Moved {new_filename} to {dest_folder}/")
+                  except Exception as e:
+                      print(f"Failed to move {new_filename} to {dest_folder}: {e}")
+              else:
+                  print(f"No matching slug keyword found for: {new_filename}")
         shell: python
 
       - name: Commit organized files
